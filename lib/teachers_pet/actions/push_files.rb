@@ -5,6 +5,7 @@ module TeachersPet
         @repository = self.options[:repository]
         @organization = self.options[:organization]
         @sshEndpoint = self.options[:ssh]
+        @branch = self.options[:branch]
       end
 
       def load_files
@@ -46,7 +47,7 @@ module TeachersPet
         remotes_to_add.keys.each do |remote|
           puts "#{remote} --> #{remotes_to_add[remote]}"
           `git remote add #{remote} #{remotes_to_add[remote]}`
-          `git push #{remote} master`
+          `git push #{remote} #{@branch}`
         end
       end
 

@@ -2,6 +2,7 @@ module TeachersPet
   class Cli
     option :organization, required: true
     option :repository, required: true
+    option :branch, banner: 'BRANCH', default: 'master', desc: "The branch to push to."
 
     students_option
     common_options

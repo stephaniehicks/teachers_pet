@@ -5,7 +5,7 @@ module TeachersPet
 
     option :title, desc: "The title of the issue to be created"
     option :body, banner: 'PATH', desc: "The path to the file containing the issue body (.txt or .md)"
-    option :labels, banner: 'LABEL1,LABEL2'
+    option :labels, banner: 'LABEL1,LABEL2', default:[]
 
     students_option
     common_options
