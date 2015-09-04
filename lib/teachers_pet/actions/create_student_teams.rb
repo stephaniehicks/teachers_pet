@@ -23,7 +23,7 @@ module TeachersPet
           else
 	    retv = self.client.create_team(org_login, team_name)
 	    teams_by_name = self.client.existing_teams_by_name(org_login)
-+           team = teams_by_name[team_name]`
+            team = teams_by_name[team_name]
           end
           self.client.add_users_to_team(org_login, team, usernames)
         end
